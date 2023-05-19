@@ -3,7 +3,7 @@ import './style.css';
 
 async function fetchData() {
   try {
-    const response = await fetch('./data.json');
+    const response = await fetch('/data.json');
     const data = await response.json();
 
     let highestValue = 0;
