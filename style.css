@@ -1,0 +1,90 @@
+:root {
+  --clr-primary: hsl(10, 79%, 65%);
+  --clr-secondary: hsl(186, 34%, 60%);
+
+  --clr-accent-100: hsl(25, 47%, 15%);
+  --clr-accent-200: hsl(28, 10%, 53%);
+  --clr-accent-400: hsl(27, 66%, 92%);
+  --clr-accent-600: hsl(33, 100%, 98%);
+
+  --fw-regular: 400;
+  --fw-bold: 700;
+
+  --ff: 'DM Sans', sans-serif;
+
+  font-family: var(--ff);
+}
+
+body {
+  display: grid;
+  place-items: center;
+  background-color: var(--clr-accent-400);
+}
+
+main {
+  margin-inline: auto ;
+  width: 540px;
+}
+
+hr {
+  border: none;
+  height: 1px;
+  background-color: var(--clr-accent-400);
+}
+
+section {
+  border-radius: 1rem;
+}
+
+.weekly__chart{
+  background-color: var(--clr-accent-600);
+  padding: 40px;
+}
+
+.balance{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  
+  color: var(--clr-accent-600);
+  background-color: var(--clr-primary);
+  
+  padding: 22px 30px;
+}
+
+#expense__chart {
+  display: flex;
+  gap: 17px;
+  justify-content: center;
+  align-items: end;
+}
+
+.bar {
+  background-color: var(--clr-primary);
+  border-radius: 0.25rem;
+  cursor: pointer;
+}
+
+.expense__bar {
+  text-align: center;
+}
+
+.highest__value {
+  background-color: var(--clr-secondary);
+}
+
+.spent {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.spent__amount {
+  color: var(--clr-accent-100);
+  font-weight: var(--fw-bold);
+  font-size: 3rem;
+}
+
+.last_month {
+  text-align: end;
+}
