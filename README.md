@@ -6,10 +6,10 @@ This is a solution to the [Expenses chart component challenge on Frontend Mentor
 
 - [Overview](#overview)
   - [The challenge](#the-challenge)
+  - [Screenshot](#screenshot)
   - [Links](#links)
 - [My process](#my-process)
   - [Built with](#built-with)
-  - [Continued development](#continued-development)
 - [Author](#author)
 
 ## Overview
@@ -23,6 +23,10 @@ Users should be able to:
 - View the optimal layout for the content depending on their device’s screen size
 - See hover states for all interactive elements on the page
 - **Bonus**: Use the JSON data file provided to dynamically size the bars on the chart
+
+### Screenshot
+
+![](./Screenshot.png)
 
 ### Links
 
@@ -38,10 +42,6 @@ Users should be able to:
 - Flexbox
 - CSS Grid
 - Mobile-first workflow
-
-### Continued development
-
-Still in development
 
 ## Author
 
