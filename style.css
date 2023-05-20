@@ -76,8 +76,19 @@ p {
   align-items: end;
 }
 
+.highest__value {
+  background-color: var(--clr-secondary);
+}
+
 .expense__day {
   margin-top: 5px;
+}
+
+.expense__bar {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .bar {
@@ -91,15 +102,27 @@ p {
   opacity: 0.6;
 }
 
-.expense__bar {
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+.value {
+  position: absolute;
+  font-size: 0.6rem;
+  top: -50px;
+  padding: 10px;
+  border-radius: 5px;
+
+  color: var(--clr-accent-600);
+  background-color: var(--clr-accent-100);
+
+  opacity: 0;
+  z-index: -1;
+  translate: 0 15px;
+  transition: all 500ms ease;
 }
 
-.highest__value {
-  background-color: var(--clr-secondary);
+.bar:hover + .value {
+  opacity: 1;
+  z-index: 1;
+  translate: 0;
+  font-size: 1rem;
 }
 
 .spent {
@@ -127,21 +150,4 @@ p {
 
 .total__expense > p {
   font-size: 1.16rem;
-}
-
-.value {
-  position: absolute;
-  font-size: 1rem;
-  top: -50px;
-  padding: 10px;
-  border-radius: 5px;
-  background-color: var(--clr-accent-100);
-  color: var(--clr-accent-600);
-  transition: opacity 1s ease-in-out;
-  opacity: 0;
-  transition: opacity 800ms ease-in-out;
-}
-
-.value.show {
-  opacity: 1;
 }

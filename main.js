@@ -33,32 +33,14 @@ async function fetchData() {
       value.classList.add('value');
       day.classList.add('expense__day');
       barDiv.classList.add('expense__bar');
-      value.classList.add('show');
 
 
       if (item.amount === highestValue) bar.classList.add('highest__value');
 
-      let leaveTimeout, enterTimeout
-
-      // event listeners for hover state
-      bar.addEventListener('mouseenter', () => {
-        clearTimeout(leaveTimeout);
-        barDiv.prepend(value);
-        enterTimeout = setTimeout(() => {
-          value.classList.add('show');
-        }, 50);
-      });
-      bar.addEventListener('mouseleave', () => {
-        clearTimeout(enterTimeout);
-        value.classList.remove('show');
-
-        leaveTimeout = setTimeout(() => {
-          barDiv.removeChild(value);
-        }, 300);
-      });
 
       // adding elemets to the parent container
       barDiv.appendChild(bar);
+      barDiv.append(value);
       barDiv.appendChild(day);
       chartContainer.appendChild(barDiv);
 
