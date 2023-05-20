@@ -28,17 +28,22 @@ main {
 
 hr {
   border: none;
-  height: 1px;
+  height: 2px;
   background-color: var(--clr-accent-400);
+  margin: 2rem 0;
 }
 
 section {
   border-radius: 1rem;
 }
 
+p {
+  color: var(--clr-accent-200);
+}
+
 .weekly__chart{
   background-color: var(--clr-accent-600);
-  padding: 40px;
+  padding: 35px 40px;
 }
 
 .balance{
@@ -50,23 +55,47 @@ section {
   background-color: var(--clr-primary);
   
   padding: 22px 30px;
+  margin-bottom: 1.5625rem;
+}
+
+.balance__text > p {
+  color: var(--clr-accent-600);
+}
+.balance__text > h2 {
+  font-size: 2rem;
+}
+.weekly__chart > h2 {
+  font-size: 2.2rem;
 }
 
 #expense__chart {
+  height: 230px;
   display: flex;
   gap: 17px;
   justify-content: center;
   align-items: end;
 }
 
+.expense__day {
+  margin-top: 5px;
+}
+
 .bar {
   background-color: var(--clr-primary);
   border-radius: 0.25rem;
   cursor: pointer;
+  transition: all 500ms ease;
+}
+
+.bar:is(:hover, :focus) {
+  opacity: 0.6;
 }
 
 .expense__bar {
-  text-align: center;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .highest__value {
@@ -86,5 +115,33 @@ section {
 }
 
 .last_month {
+  font-size: 1.125rem;
   text-align: end;
+}
+
+.spent__percent{
+  font-size: 1.2rem;
+  color: var(--clr-accent-100);
+  font-weight: var(--fw-bold);
+}
+
+.total__expense > p {
+  font-size: 1.16rem;
+}
+
+.value {
+  position: absolute;
+  font-size: 1rem;
+  top: -50px;
+  padding: 10px;
+  border-radius: 5px;
+  background-color: var(--clr-accent-100);
+  color: var(--clr-accent-600);
+  transition: opacity 1s ease-in-out;
+  opacity: 0;
+  transition: opacity 800ms ease-in-out;
+}
+
+.value.show {
+  opacity: 1;
 }
