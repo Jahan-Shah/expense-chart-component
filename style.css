@@ -76,10 +76,6 @@ p {
   align-items: end;
 }
 
-.highest__value {
-  background-color: var(--clr-secondary);
-}
-
 .expense__day {
   margin-top: 5px;
 }
@@ -123,6 +119,10 @@ p {
   z-index: 1;
   translate: 0;
   font-size: 1rem;
+}
+
+.highest__value {
+  background-color: var(--clr-secondary);
 }
 
 .spent {
